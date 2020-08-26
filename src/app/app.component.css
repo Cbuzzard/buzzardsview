@@ -1,0 +1,96 @@
+
+#grid {
+    background-color: #e8e8e8;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr; */
+}
+
+app-card,  #buzzardlogocontainer{
+    flex: 33.33%;
+    height: fit-content;
+    transition: transform .6s ease-in-out;
+    overflow: hidden;
+}
+
+app-card:hover {
+    transform: scale(1.1);
+}
+
+app-card:active {
+    /* transform:  translate(33.33vw, 0) rotateY(180deg) scale(2); */
+}
+
+#dimmer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: opacity .3s ease-out;
+    visibility: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+    app-card,  #buzzardlogocontainer {
+      flex: 50%;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    app-card,  #buzzardlogocontainer {
+      flex: 100%;
+    }
+    #linkedin {
+        display: none;
+    }
+}
+
+.logocontainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.logo {
+    height: 10vh;
+}
+
+#buzzardlogocontainer{
+    height: fit-content;
+    width: fit-content;
+    align-self: center;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#buzzardlogo{
+    height: 8vh;
+}
+
+#readitcontainer {
+    background-image: url(../assets/background.png);
+    background-size: cover;
+}
+
+#calculatorcontainer {
+    background-color: #268cbf;
+}
+
+#calendarcontainer {
+    background-color: #2b2b2b;
+}
+
+#linkedincontainer {
+    background-color: #0077b7;
+}
+
+#githubcontainer {
+    background-color: #282828;
+}
