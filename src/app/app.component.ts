@@ -22,7 +22,7 @@ export class AppComponent {
         this.elementCurrentlyExpanded.style.pointerEvents= '';
         this.elementCurrentlyExpanded = null;
         this.dimmer.nativeElement.style.visibility = 'hidden';
-      }, 600)
+      }, 400)
       
       
       
