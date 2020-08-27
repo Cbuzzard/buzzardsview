@@ -5,23 +5,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr; */
 }
 
 app-card,  #buzzardlogocontainer{
     flex: 33.33%;
     height: fit-content;
-    transition: transform .4s ease-in-out;
+    transition: transform .2s ease-in-out;
     overflow: hidden;
 }
 
 app-card:hover {
     transform: scale(1.1);
-}
-
-app-card:active {
-    /* transform:  translate(33.33vw, 0) rotateY(180deg) scale(2); */
 }
 
 #dimmer {
@@ -43,7 +37,7 @@ app-card:active {
 
 @media screen and (max-width: 770px) {
     app-card,  #buzzardlogocontainer {
-      flex: 100%;
+      flex: 90%;
     }
     #linkedin {
         display: none;
