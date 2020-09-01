@@ -1,26 +1,46 @@
-
 #grid {
     background-color: #e8e8e8;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    overflow: hidden;
 }
 
-app-card,  #buzzardlogocontainer{
+.logocontainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    backface-visibility: hidden;
+    transition-delay: .2s;
+    position: relative;
+    top: -100%;
+}
+
+.back {
+    transform: rotateY(180deg);
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.671);
+    transition-delay: .2s;
+}
+
+app-card,  .emptycontainer{
     flex: 33.33%;
     height: fit-content;
     transition: transform .2s ease-in-out;
     overflow: hidden;
+    position: relative;
 }
 
-app-card:hover {
+.hover:hover {
     transform: scale(1.1);
 }
 
 #dimmer {
     position: absolute;
-    height: 200%;
+    height: 100%;
     width: 100%;
     background-color: rgba(0,0,0,0.6);
     opacity: 0;
@@ -28,42 +48,32 @@ app-card:hover {
     visibility: hidden;
 }
 
-@media screen and (max-width: 1200px) {
-    app-card,  #buzzardlogocontainer {
-      flex-basis: 0;
-      flex: 50%;
-    }
+.emptycontainer {
+    height: 20vh;
 }
 
-@media screen and (max-width: 770px) {
-    app-card,  #buzzardlogocontainer {
-      flex: 90%;
-    }
-    #linkedin {
-        display: none;
-    }
+.twocolumnempty {
+    display: none;
 }
 
-.logocontainer {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content:center;
-    align-items:center;
-
+.onecolumnempty {
+    display: none;
 }
 
 .logo {
-    height: 10vh;
+    height: 13vh;
+    stroke: black;
 }
 
 #buzzardlogocontainer{
-    height: fit-content;
-    width: fit-content;
-    align-self: center;
+    position: absolute;
+    top: 0;
+    width: 30%;
     text-align: center;
     padding-top: 5%;
     padding-bottom: 5%;
+    margin-left: 35vw;
+    margin-right: 35vw;
 }
 
 #buzzardlogo{
@@ -84,9 +94,139 @@ app-card:hover {
 }
 
 #linkedincontainer {
-    background-color: #0077b7;
+    background-color: white;
 }
 
 #githubcontainer {
     background-color: #282828;
+}
+
+#mealtimecontainer, #lightscontainer, #wavecontainer, #launchcodecontainer, #profilecontainer {
+    background-color: white;
+}
+
+.backcontentcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1px 1.5fr;
+    grid-template-rows: 1fr 6fr;
+    height: 100% ;
+    overflow: hidden;
+    text-align: center;
+}
+
+.divider {
+    border-right: grey solid 1px;
+    height:70%;
+    align-self: center;
+}
+
+.contentcontainer {
+    box-sizing: border-box;
+    margin: 5%;
+    text-align: center;
+}
+
+.infocontainer {
+    margin-top: 10px;
+    align-self: center;
+    padding-bottom: 1.8vh;
+    font-family: "Palatino Linotype", "Book Antiqua", serif;
+}
+
+.title {
+    font-size: 2.7vh;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.linklogo {
+    height: 1.5vh;
+}
+
+.linkcontainer {
+    margin-bottom: .3vh;
+}
+
+.link {
+    font-size: 1.5vh;
+    text-decoration: none;
+    color: black;
+    vertical-align: middle;
+    margin-left: 5px
+}
+
+.technologiestitle, .linkstitle {
+    margin-bottom: .7vh;
+    font-size: 2vh;
+}
+
+.technologies {
+    list-style-position: inside;
+    font-size: 1.3vh;
+}
+
+li {
+    padding-bottom: .2vh;
+}
+
+a {
+    text-decoration: none;
+    height: 1.5vh;
+    vertical-align: middle;
+}
+
+.descriptioncontainer {
+    height: fit-content;
+    align-self: center;
+    margin-bottom: 5vh;
+}
+
+.descriptiontitle {
+    font-size: 1.7vh;
+    padding-bottom: 1vh;
+}
+
+.description {
+    font-size: 1.3vh;
+}
+
+@media screen and (max-width: 1200px) {
+    app-card,  .emptycontainer {
+      flex-basis: 0;
+      flex: 50%;
+    }
+
+    #buzzardlogocontainer {
+        margin: 0;
+        width: 100%;
+    }
+
+    #dimmer {
+        height: 153.5%;
+    }
+
+    .threecolumnempty {
+        display: none;
+    }
+    .twocolumnempty {
+        display: inline-block;
+    }
+
+}
+
+@media screen and (max-width: 770px) {
+    app-card,  .emptycontainer {
+      flex: 90%;
+    }
+
+    #dimmer {
+        height: 286.5%;
+    }
+
+    .twocolumnempty {
+        display: none;
+    }
+    .onecolumnempty {
+        display: inline-block;
+    }
 }

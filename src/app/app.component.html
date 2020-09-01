@@ -1,47 +1,327 @@
-<div #dimmer id="dimmer" (click)='calculateTranslation(dimmer)'></div>
-
 <div id="grid">
-  <app-card #linkedin (click)='calculateTranslation(linkedin)' id="linkedin">
-    <div class="logocontainer" id="linkedincontainer">
-      <img  class="logo" src="../assets/linkedinlogo.svg">
-    </div>
-  </app-card>
+
+  <div #dimmer id="dimmer" (click)='calculateTranslation(dimmer)'></div>
+
   <div id="buzzardlogocontainer"><img id="buzzardlogo" src="../assets/BuzzardLogo.svg"></div>
-  <app-card #github (click)='calculateTranslation(github)'>
-    <div class="logocontainer" id="githubcontainer">
-      <img  class="logo" src="../assets/githublogo.svg">
+
+  <div class="emptycontainer onecolumnempty"></div>
+  <div class="emptycontainer twocolumnempty"></div>
+  <div class="emptycontainer twocolumnempty"></div>
+
+  <app-card #profile (click)='calculateTranslation(profile)' class="hover">
+    <div class="back">
+      <div class="backcontentcontainer">
+        <p class="title">About Me</p>
+        <div class="infocontainer contentcontainer">
+          <div class="linkcontainer">
+            <p class="linkstitle">Links</p>
+            <a href="https://github.com/Cbuzzard" target="_blank" >
+              <img class="linklogo" src="../assets/githublogo2.svg">
+            </a>
+            <a class="link" href="https://github.com/Cbuzzard" target="_blank" >Github</a>
+          </div>
+          <div class="linkcontainer">
+            <a href="https://www.linkedin.com/in/corwin-buzzard-294b061b0/" target="_blank" >
+              <img class="linklogo" src="../assets/linkedinlogo.svg">
+            </a>
+            <a class="link" href="https://www.linkedin.com/in/corwin-buzzard-294b061b0/" target="_blank">LinkedIn</a>
+          </div>
+          <div class="technologiescontainer">
+            <p class="technologiestitle">Contact Info</p>
+            <ul class="technologies" style="list-style: none;">
+              <li>Corwin1998@gmail.com</li>
+              <li>(954)881-4211</li>
+            </ul>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="descriptioncontainer contentcontainer">
+          <p class="descriptiontitle">Description</p>
+          <p class="description">My name is Corwin Buzzard and I am a full stack software developer. I primarily work with Spring and Angular but I Have a love for learning new technologies. I learn and adapt quickly and enjoy the entire programming process.</p>
+        </div>
+      </div>
+    </div>
+    <div class="logocontainer" id="profilecontainer">
+      <img  class="logo" src="../assets/ProfileLogo.svg">
     </div>
   </app-card>
-  <app-card #calendar (click)='calculateTranslation(calendar)'>
+
+  <div class="emptycontainer threecolumnempty"></div>
+
+
+  <app-card #launchcode (click)='calculateTranslation(launchcode)' class="hover">
+    <div class="back">
+      <div class="backcontentcontainer">
+        <p class="title">Launch Code</p>
+        <div class="infocontainer contentcontainer">
+          <div class="linkcontainer">
+            <p class="linkstitle">Links</p>
+            <a href="https://github.com/Cbuzzard" target="_blank" >
+              <img class="linklogo" src="../assets/githublogo2.svg">
+            </a>
+            <a class="link" href="https://github.com/Cbuzzard" target="_blank" >Repository</a>
+          </div>
+          <div class="linkcontainer">
+            <a href="https://www.launchcode.org/" target="_blank" >
+              <img class="linklogo" src="../assets/linkedinlogo.svg">
+            </a>
+            <a class="link" href="https://www.launchcode.org/" target="_blank">Website</a>
+          </div>
+          <div class="technologiescontainer">
+            <p class="technologiestitle">Technologies</p>
+            <ul class="technologies">
+              <li>JavaScrip/TypeScript</li>
+              <li>Spring Boot</li>
+              <li>HTML/CSS</li>
+              <li>Angular</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="descriptioncontainer contentcontainer">
+          <p class="descriptiontitle">Description</p>
+          <p class="description">Launch Code is an 8 month coding boot camp that I completed and graduated from. We learned Every step of the development process from cybersecurity to Agile development. Classes were taught and designed by industry profesionals. Though It wasn't easy, Launch Code gave me the foundation to become the developer that I am today.</p>
+        </div>
+      </div>
+    </div>
+    <div class="logocontainer" id="launchcodecontainer">
+      <img  class="logo" src="../assets/LaunchCodeLogo.svg">
+    </div>
+  </app-card>
+
+  <app-card #calendar (click)='calculateTranslation(calendar)' class="hover">
+    <div class="back">
+      <div class="backcontentcontainer">
+        <p class="title">Calendar Tracker</p>
+        <div class="infocontainer contentcontainer">
+          <div class="linkcontainer">
+            <p class="linkstitle">Links</p>
+            <a href="https://github.com/Cbuzzard/calendar_tracker" target="_blank" >
+              <img class="linklogo" src="../assets/githublogo2.svg">
+            </a>
+            <a class="link" href="https://github.com/Cbuzzard/calendar_tracker" target="_blank" >Repository</a>
+          </div>
+          <div class="linkcontainer">
+            <a href="https://play.google.com/store/apps/details?id=buzzardsview.calendartracker" target="_blank" >
+              <img class="linklogo" src="../assets/worldlogo.svg">
+            </a>
+            <a class="link" href="https://play.google.com/store/apps/details?id=buzzardsview.calendartracker" target="_blank">App Store</a>
+          </div>
+          <div class="technologiescontainer">
+            <p class="technologiestitle">Technologies</p>
+            <ul class="technologies">
+              <li>Java</li>
+              <li>Android</li>
+              <li>Google API</li>
+            </ul>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="descriptioncontainer contentcontainer">
+          <p class="descriptiontitle">Description</p>
+          <p class="description">This is an android application made to increase prductivity. It uses your google calendars to allow you to track how you spend your day. UI to track events throughout the day and an analytics page that gives a visual of how you spend your time.</p>
+        </div>
+      </div>
+    </div>
     <div class="logocontainer" id="calendarcontainer">
       <img  class="logo" src="../assets/CalendarLogo.svg">
     </div>
   </app-card>
 
-  <app-card #mealtime (click)='calculateTranslation(mealtime)'>
-    <div class="logocontainer">
+  <app-card #mealtime (click)='calculateTranslation(mealtime)' class="hover">
+    <div class="back">
+      <div class="backcontentcontainer">
+        <p class="title">MealTime</p>
+        <div class="infocontainer contentcontainer">
+          <div class="linkcontainer">
+            <p class="linkstitle">Links</p>
+            <a href="https://github.com/brendenmoore/angular-meal-time" target="_blank" >
+              <img class="linklogo" src="../assets/githublogo2.svg">
+            </a>
+            <a class="link" href="https://github.com/brendenmoore/angular-meal-time" target="_blank" >Repository</a>
+          </div>
+          <div class="linkcontainer">
+            <a href="https://angular-meal-time.web.app/" target="_blank" >
+              <img class="linklogo" src="../assets/worldlogo.svg">
+            </a>
+            <a class="link" href="https://angular-meal-time.web.app/" target="_blank" >Website</a>
+          </div>
+          <div class="technologiescontainer">
+            <p class="technologiestitle">Technologies</p>
+            <ul class="technologies">
+              <li>Angular</li>
+              <li>Firebase</li>
+              <li>NoSQL</li>
+            </ul>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="descriptioncontainer contentcontainer">
+          <p class="descriptiontitle">Description</p>
+          <p class="description">This is a web app that I am making with a classmate using angular and firebase realtime database. It is used to create, store and schedule recipes. We used oauth integration to allow users to login with google and store their custom recipe onto our database.</p>
+        </div>
+      </div>
+    </div>
+    <div id="mealtimecontainer" class="logocontainer">
       <img  class="logo" src="../assets/MealTimeLogo.svg">
     </div>
   </app-card>
-  <app-card #readit (click)='calculateTranslation(readit)'>
+
+  <app-card #readit (click)='calculateTranslation(readit)' class="hover">
+    <div class="back">
+      <div class="backcontentcontainer">
+        <p class="title">ReadIt</p>
+        <div class="infocontainer contentcontainer">
+          <div class="linkcontainer">
+            <p class="linkstitle">Links</p>
+            <a href="https://github.com/Cbuzzard/readitcheck" target="_blank" >
+              <img class="linklogo" src="../assets/githublogo2.svg">
+            </a>
+            <a class="link" href="https://github.com/Cbuzzard/readitcheck" target="_blank" >Repository</a>
+          </div>
+          <div class="linkcontainer">
+            <a href="https://www.readitcheck.com/" target="_blank" >
+              <img class="linklogo" src="../assets/worldlogo.svg">
+            </a>
+            <a class="link" href="https://www.readitcheck.com/" target="_blank">Website</a>
+          </div>
+          <div class="technologiescontainer">
+            <p class="technologiestitle">Technologies</p>
+            <ul class="technologies">
+              <li>Spring Boot</li>
+              <li>Angular</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="descriptioncontainer contentcontainer">
+          <p class="descriptiontitle">Description</p>
+          <p class="description">This project will be a forum for news and other articles that will require the user to answer questions about the article before they can comment on it. The goal for this project is to have a spring boot backend restful api and SQL database that will be used by my angular front end to display and save user data.</p>
+        </div>
+      </div>
+    </div>
     <div class="logocontainer" id="readitcontainer">
       <img  class="logo" src="../assets/readitlogo.svg">
     </div>
   </app-card>
-  <app-card #lights (click)='calculateTranslation(lights)'>
-    <div class="logocontainer">
+
+  <app-card #lights (click)='calculateTranslation(lights)' class="hover">
+    <div class="back">
+      <div class="backcontentcontainer">
+        <p class="title">Need A Light</p>
+        <div class="infocontainer contentcontainer">
+          <div class="linkcontainer">
+            <p class="linkstitle">Links</p>
+            <a href="https://github.com/Cbuzzard" target="_blank" >
+              <img class="linklogo" src="../assets/githublogo2.svg">
+            </a>
+            <a class="link" href="https://github.com/Cbuzzard" target="_blank" >Repository</a>
+          </div>
+          <div class="linkcontainer">
+            <a href="https://need-a-light.com/" target="_blank" >
+              <img class="linklogo" src="../assets/worldlogo.svg">
+            </a>
+            <a class="link" href="https://need-a-light.com/" target="_blank">Website</a>
+          </div>
+          <div class="technologiescontainer">
+            <p class="technologiestitle">Technologies</p>
+            <ul class="technologies">
+              <li>Spring Boot</li>
+              <li>Angular</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="descriptioncontainer contentcontainer">
+          <p class="descriptiontitle">Description</p>
+          <p class="description">Need A Light is a christmas light installation company that I own and run. The Website will be a blog coded from scratch for optimal SEO, with an admin login to update and create blog posts. Blogs are saved to a MySQL database and sent to the angular front end with by the spring boot backend.</p>
+        </div>
+      </div>
+    </div>
+    <div id="lightscontainer" class="logocontainer">
       <img  class="logo" src="../assets/LightsLogo.svg">
     </div>
   </app-card>
-  <app-card #calculator (click)='calculateTranslation(calculator)'>
+
+  <app-card #calculator (click)='calculateTranslation(calculator)' class="hover">
+    <div class="back">
+      <div class="backcontentcontainer">
+        <p class="title">Christmas Light Calculator</p>
+        <div class="infocontainer contentcontainer">
+          <div class="linkcontainer">
+            <p class="linkstitle">Links</p>
+            <a href="https://github.com/Cbuzzard" target="_blank" >
+              <img class="linklogo" src="../assets/githublogo2.svg">
+            </a>
+            <a class="link" href="https://github.com/Cbuzzard" target="_blank" >Repository</a>
+          </div>
+          <div class="linkcontainer">
+            <a href="https://play.google.com/store/apps/details?id=buzzardsView.calculator" target="_blank" >
+              <img class="linklogo" src="../assets/worldlogo.svg">
+            </a>
+            <a class="link" href="https://play.google.com/store/apps/details?id=buzzardsView.calculator" target="_blank">App Store</a>
+          </div>
+          <div class="technologiescontainer">
+            <p class="technologiestitle">Technologies</p>
+            <ul class="technologies">
+              <li>Java</li>
+              <li>Android</li>
+            </ul>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="descriptioncontainer contentcontainer">
+          <p class="descriptiontitle">Description</p>
+          <p class="description">Used to quote houses for my christmas light installation company. It calculates cost of lights and total wattage to ensure you don't go over capacity. Has settings page to adjust desired types of lights as well as prices and watages.</p>
+        </div>
+      </div>
+    </div>
     <div class="logocontainer" id="calculatorcontainer">
       <img  class="logo" src="../assets/CalculatorLogo.svg">
     </div>
   </app-card>
-  <app-card #wave (click)='calculateTranslation(wave)'>
-    <div class="logocontainer">
+
+  <app-card #wave (click)='calculateTranslation(wave)' class="hover">
+    <div class="back">
+      <div class="backcontentcontainer">
+        <p class="title">Wave Assistant</p>
+        <div class="infocontainer contentcontainer">
+          <div class="linkcontainer">
+            <p class="linkstitle">Links</p>
+            <a href="https://github.com/Cbuzzard/wave_assistant" target="_blank" >
+              <img class="linklogo" src="../assets/githublogo2.svg">
+            </a>
+            <a class="link" href="https://github.com/Cbuzzard/wave_assistant" target="_blank" >Repository</a>
+          </div>
+          <div class="linkcontainer">
+            <a href="" target="_blank" >
+              <img class="linklogo" src="../assets/worldlogo.svg">
+            </a>
+            <a class="link" href="" target="_blank">Website</a>
+          </div>
+          <div class="technologiescontainer">
+            <p class="technologiestitle">Technologies</p>
+            <ul class="technologies">
+              <li>TypeScript</li>
+              <li>Dialogflow</li>
+              <li>Firebase Functions</li>
+            </ul>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="descriptioncontainer contentcontainer">
+          <p class="descriptiontitle">Description</p>
+          <p class="description">This is a set of functions used to communicate local wave data with google assistant. Wave data is retrieved from an api from MagicSeaWeed then formatted so that it can be used with DialogFlow.</p>
+        </div>
+      </div>
+    </div>
+    <div id="wavecontainer" class="logocontainer">
       <img  class="logo" src="../assets/WaveLogo.svg">
     </div>
   </app-card>
+
   <div id="buzzardlogocontainer"></div>
 </div>
