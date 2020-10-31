@@ -5,10 +5,11 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     overflow: hidden;
+    transition: transform .2s ease-in-out;
 }
 
 .logocontainer{
-    height: 100%;
+    height: 100.5%;
     width: 100%;
     display: flex;
     justify-content:center;
@@ -29,17 +30,23 @@
 app-card,  .emptycontainer{
     flex: 33.33%;
     height: fit-content;
-    transition: transform .2s ease-in-out;
+    position: relative;
+    transition: top .6s ease-in-out, transform .6s ease-in-out, left .6s ease-in-out, right .6s ease-in-out;
+    top: 0;
     overflow: hidden;
     position: relative;
 }
 
 .hover:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+.enlarge {
+    transform: scale(1.03);
 }
 
 #dimmer {
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     background-color: rgba(0,0,0,0.6);
@@ -65,28 +72,55 @@ app-card,  .emptycontainer{
     stroke: black;
 }
 
+/*  */
+/* logo */
+/*  */
 #buzzardlogocontainer{
     position: absolute;
     top: 0;
     width: 30%;
     text-align: center;
     padding-top: 5%;
-    padding-bottom: 5%;
     margin-left: 35vw;
     margin-right: 35vw;
+    z-index: 2;
 }
 
 #buzzardlogo{
     height: 8vh;
 }
 
+#projectstext {
+    display: block;
+    margin: 8vh auto 0 auto;
+    transition: opacity .2s;
+    cursor: pointer;
+
+}
+
+#projectstext:hover {
+    opacity: 50%;
+}
+
+.arrow {
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 20px;
+    transition: opacity .2s;
+    opacity: 0;
+}
+
+.arrow:hover {
+    opacity: 50% !important;
+}
+
 #readitcontainer {
-    background-image: url(../assets/background.png);
-    background-size: cover;
+    background-color: #2b2b2b;
 }
 
 #calculatorcontainer {
-    background-color: #268cbf;
+    background-color: #4b81ab;
 }
 
 #calendarcontainer {
@@ -101,100 +135,141 @@ app-card,  .emptycontainer{
     background-color: #282828;
 }
 
-#mealtimecontainer, #lightscontainer, #wavecontainer, #launchcodecontainer, #profilecontainer {
+#wavecontainer {
+    background-color: #4b81ab;
+}
+
+#mealtimecontainer, #lightscontainer, #launchcodecontainer, #profilecontainer {
     background-color: white;
 }
-
+/*  */
+/* back of card */
+/*  */
 .backcontentcontainer {
-    display: grid;
-    grid-template-columns: 1fr 1px 1.5fr;
-    grid-template-rows: 1fr 6fr;
-    height: 100% ;
-    overflow: hidden;
+    height: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-.divider {
-    border-right: grey solid 1px;
-    height:70%;
-    align-self: center;
-}
-
-.contentcontainer {
-    box-sizing: border-box;
-    margin: 5%;
-    text-align: center;
-}
-
-.infocontainer {
-    margin-top: 10px;
-    align-self: center;
-    padding-bottom: 1.8vh;
-    font-family: "Palatino Linotype", "Book Antiqua", serif;
+.title-container {
+    margin: 1% auto 0 auto;
+    width: fit-content;
+    flex: 5%;
 }
 
 .title {
-    font-size: 2.7vh;
-    grid-column-start: 1;
-    grid-column-end: 4;
+    font-size: 20px;
+    margin: 0 0 10px 0;
 }
 
-.linklogo {
-    height: 1.5vh;
-}
-
-.linkcontainer {
-    margin-bottom: .3vh;
-}
-
-.link {
-    font-size: 1.5vh;
-    text-decoration: none;
-    color: black;
-    vertical-align: middle;
-    margin-left: 5px
-}
-
-.technologiestitle, .linkstitle {
-    margin-bottom: .7vh;
-    font-size: 2vh;
-}
-
-.technologies {
-    list-style-position: inside;
-    font-size: 1.3vh;
-}
-
-li {
-    padding-bottom: .2vh;
-}
-
-a {
-    text-decoration: none;
-    height: 1.5vh;
-    vertical-align: middle;
+.infocontainer {
+    margin-top: 0;
+    align-self: center;
+    flex: 5%;
 }
 
 .descriptioncontainer {
-    height: fit-content;
-    align-self: center;
-    margin-bottom: 5vh;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
-.descriptiontitle {
-    font-size: 1.7vh;
-    padding-bottom: 1vh;
-}
-
 .description {
-    font-size: 1.3vh;
+    display: flex;
+    align-items: center;
+    min-width: 280px;
+    width: 80%;
+    flex: 70%;
+}
+.button-container {
+    flex: 30%;
+    display: flex;
+    margin: 0 auto;
+    max-width: 300px;
+    width: 80%;
+    justify-content: space-evenly;
 }
 
-@media screen and (max-width: 1200px) {
+.btn {
+    /* flex: 50%; */
+    margin: auto;
+}
+
+.mat-raised-button {
+    height: 20px !important;
+    width: 80px !important;
+    line-height: 20px !important;
+    padding: 0;
+    font-size: 10px;
+}
+
+.initial-transform-container > .profile {
+    top: 94vh;
+    left: 13vw;
+    transform: rotate(45deg);
+    transition-delay: 0s;
+}
+.initial-transform-container > .launchcode {
+    transition-delay: .1s;
+    top: 85vh;
+    left: -49vw;
+    transform: rotate(56deg);
+
+}
+.initial-transform-container > .lights {
+    transition-delay: .2s;
+    top: 45vh;
+    left: 23vw;
+    transform: rotate(69deg);
+}
+.initial-transform-container > .readit {
+    transition-delay: .3s;
+    top: 42vh;
+    left: -4vw;
+    transform: rotate(83deg);
+
+}
+.initial-transform-container > .mealtime {
+    transition-delay: .4s;
+    top: 43vh;
+    left: -32vw;
+    transform: rotate(97deg);
+
+}
+.initial-transform-container > .wave {
+    transition-delay: .5s;
+    top: 13vh;
+    left: 41vw;
+    transform: rotate(111deg);
+
+}
+.initial-transform-container > .calendar {
+    transition-delay: .6s;
+    top: 21vh;
+    left: 14vw;
+    transform: rotate(124deg);
+
+}
+.initial-transform-container > .calculator {
+    transition-delay: .7s;
+    top: 30vh;
+    left: -14vw;
+    transform: rotate(135deg);
+
+}
+
+@media screen and (max-width: 1400px) {
+
     app-card,  .emptycontainer {
       flex-basis: 0;
       flex: 50%;
     }
+
+    /* #projectstext {
+        margin: 1vh auto 0 auto;
+    } */
 
     #buzzardlogocontainer {
         margin: 0;
@@ -202,7 +277,7 @@ a {
     }
 
     #dimmer {
-        height: 153.5%;
+        height: 100%;
     }
 
     .threecolumnempty {
@@ -212,15 +287,53 @@ a {
         display: inline-block;
     }
 
+    .initial-transform-container > .profile {
+        top: 75vh;
+        left: 8vw;
+    }
+    .initial-transform-container > .launchcode {
+        top: 70vh;
+        left: -38vw;
+    }
+    .initial-transform-container > .lights {
+        top: 33vh;
+        left: 15vw;
+    }
+    .initial-transform-container > .readit {
+        top: 30vh;
+        left: -28vw;
+    
+    }
+    .initial-transform-container > .mealtime {
+        top: -3vh;
+        left: 28vw;
+    
+    }
+    .initial-transform-container > .wave {
+        top: 0vh;
+        left: -16vw;
+    
+    }
+    .initial-transform-container > .calendar {
+        top: -26vh;
+        left: 40vw;
+    }
+    .initial-transform-container > .calculator {
+        top: -18vh;
+        left: -5vw;
+    }
+
 }
 
 @media screen and (max-width: 770px) {
-    app-card,  .emptycontainer {
-      flex: 90%;
+
+    body {
+        height: 100.5vh;
+        overflow: hidden;
     }
 
-    #dimmer {
-        height: 286.5%;
+    app-card,  .emptycontainer {
+      flex: 90%;
     }
 
     .twocolumnempty {
@@ -229,4 +342,46 @@ a {
     .onecolumnempty {
         display: inline-block;
     }
+
+    .initial-transform-container > .profile {
+        top: 85vh;
+        left: -28vw;
+    }
+    .initial-transform-container > .launchcode {
+        top: 45vh;
+        left: -20vw;
+    }
+    .initial-transform-container > .lights {
+        top: 6.5vh;
+        left: -12vw;
+    }
+    .initial-transform-container > .readit {
+        top: -30vh;
+        left: -5vw;
+    
+    }
+    .initial-transform-container > .mealtime {
+        top: -63vh;
+        left: 5vw;
+    
+    }
+    .initial-transform-container > .wave {
+        top: -93vh;
+        left: 12vw;
+    
+    }
+    .initial-transform-container > .calendar {
+        top: -120vh;
+        left: 20vw;
+    }
+    .initial-transform-container > .calculator {
+        top: -145vh;
+        left: 28vw;
+    }
+
+}
+
+.display-position {
+    top: 0 !important;
+    left: 0 !important;
 }
