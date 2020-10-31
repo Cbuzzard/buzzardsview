@@ -1,11 +1,40 @@
-*{
-    padding: 0;
-    margin: 0;
+
+
+.clickable {
+    cursor: pointer;
+}
+
+html {
+    height: fit-content;
+    overflow-y: visible;
     overflow-x: hidden;
 }
 
-@media screen and (min-width: 1201px) {
-    *{
-        overflow: hidden;
+body { 
+    margin: 0; 
+    font-family: adobeMing;
+    line-height: 20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+@font-face {
+    font-family: adobeMing;
+    src: url(./assets/AdobeMingStd-Light.otf);
+}
+
+@media screen and (max-width: 1400px) {
+    body {
+        height: 100.5vh;
     }
 }
+
+button {
+    overflow: hidden;
+}
+
+p {
+    font-size: 10px;
+    margin: 0 auto;
+}
+
