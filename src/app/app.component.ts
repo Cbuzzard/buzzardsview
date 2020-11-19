@@ -8,6 +8,19 @@ import { AfterContentInit, AfterViewInit, Component, ElementRef, OnInit, ViewChi
 })
 export class AppComponent implements AfterViewInit {
 
+  @ViewChild('grid') grid;
+  @ViewChild('adimmer') adimmer;
+  @ViewChild('profile') profile;
+  @ViewChild('launchcode') launchcode;
+  @ViewChild('calendar') calendar;
+  @ViewChild('mealtime') mealtime;
+  @ViewChild('readit') readit;
+  @ViewChild('lights') lights;
+  @ViewChild('calculator') calculator;
+  @ViewChild('wave') wave;
+  @ViewChild('projects') projects;
+  @ViewChild('arrow') arrow;
+
   elementCurrentlyExpanded = null;
 
   clickDisabled = false;
@@ -24,18 +37,7 @@ export class AppComponent implements AfterViewInit {
   
   title = 'buzzardsview';
 
-  @ViewChild('grid') grid;
-  @ViewChild('adimmer') adimmer;
-  @ViewChild('profile') profile;
-  @ViewChild('launchcode') launchcode;
-  @ViewChild('calendar') calendar;
-  @ViewChild('mealtime') mealtime;
-  @ViewChild('readit') readit;
-  @ViewChild('lights') lights;
-  @ViewChild('calculator') calculator;
-  @ViewChild('wave') wave;
-  @ViewChild('projects') projects;
-  @ViewChild('arrow') arrow;
+ 
 
   elArr: Array<any>;
 

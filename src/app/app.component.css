@@ -6,6 +6,7 @@
     justify-content: flex-start;
     overflow: hidden;
     transition: transform .2s ease-in-out;
+    -webkit-transition: transform .2s ease-in-out;
 }
 
 .logocontainer{
@@ -15,16 +16,20 @@
     justify-content:center;
     align-items:center;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     transition-delay: .2s;
+    -webkit-transition-delay: .2s;
     position: relative;
     top: -100%;
 }
 
 .back {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
     height: 100%;
     background-color: rgba(255, 255, 255, 0.671);
     transition-delay: .2s;
+    -webkit-transition-delay: .2s;
 }
 
 app-card,  .emptycontainer{
@@ -32,17 +37,20 @@ app-card,  .emptycontainer{
     height: fit-content;
     position: relative;
     transition: top .6s ease-in-out, transform .6s ease-in-out, left .6s ease-in-out, right .6s ease-in-out;
+    -webkit-transition: top .6s ease-in-out, transform .6s ease-in-out, left .6s ease-in-out, right .6s ease-in-out;
     top: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
 }
 
 .hover:hover {
     transform: scale(1.05);
+    -webkit-transform: scale(1.05);
 }
 
 .enlarge {
     transform: scale(1.03);
+    -webkit-transform: scale(1.03);
 }
 
 #dimmer {
@@ -52,6 +60,7 @@ app-card,  .emptycontainer{
     background-color: rgba(0,0,0,0.6);
     opacity: 0;
     transition: opacity .4s ease-out;
+    -webkit-transition: opacity .4s ease-out;
     visibility: hidden;
 }
 
@@ -94,6 +103,7 @@ app-card,  .emptycontainer{
     display: block;
     margin: 8vh auto 0 auto;
     transition: opacity .2s;
+    -webkit-transition: opacity .2s;
     cursor: pointer;
 
 }
@@ -108,6 +118,7 @@ app-card,  .emptycontainer{
     position: relative;
     top: 20px;
     transition: opacity .2s;
+    -webkit-transition: opacity .2s;
     opacity: 0;
 }
 
@@ -151,6 +162,8 @@ app-card,  .emptycontainer{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .title-container {
@@ -209,55 +222,66 @@ app-card,  .emptycontainer{
     top: 94vh;
     left: 13vw;
     transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
     transition-delay: 0s;
+    -webkit-transition-delay: 0s;
 }
 .initial-transform-container > .launchcode {
     transition-delay: .1s;
+    -webkit-transition-delay: .1s;
     top: 85vh;
     left: -49vw;
     transform: rotate(56deg);
+    -webkit-transform: rotate(56deg);
 
 }
 .initial-transform-container > .lights {
     transition-delay: .2s;
+    -webkit-transition-delay: .2s;
     top: 45vh;
     left: 23vw;
     transform: rotate(69deg);
+    -webkit-transform: rotate(69deg);
 }
 .initial-transform-container > .readit {
     transition-delay: .3s;
+    -webkit-transition-delay: .3s;
     top: 42vh;
     left: -4vw;
     transform: rotate(83deg);
-
+    -webkit-transform: rotate(83deg);
 }
 .initial-transform-container > .mealtime {
     transition-delay: .4s;
+    -webkit-transition-delay: .4s;
     top: 43vh;
     left: -32vw;
     transform: rotate(97deg);
-
+    -webkit-transform: rotate(97deg);
 }
 .initial-transform-container > .wave {
     transition-delay: .5s;
+    -webkit-transition-delay: .5s;
     top: 13vh;
     left: 41vw;
     transform: rotate(111deg);
-
+    -webkit-transform: rotate(111deg);
 }
 .initial-transform-container > .calendar {
     transition-delay: .6s;
+    -webkit-transition-delay: .6s;
     top: 21vh;
     left: 14vw;
     transform: rotate(124deg);
-
+    -webkit-transform: rotate(124deg);
 }
 .initial-transform-container > .calculator {
     transition-delay: .7s;
+    -webkit-transition-delay: .7s;
     top: 30vh;
     left: -14vw;
     transform: rotate(135deg);
-
+    -webkit-transform: rotate(135deg);
 }
 
 @media screen and (max-width: 1400px) {
@@ -266,10 +290,6 @@ app-card,  .emptycontainer{
       flex-basis: 0;
       flex: 50%;
     }
-
-    /* #projectstext {
-        margin: 1vh auto 0 auto;
-    } */
 
     #buzzardlogocontainer {
         margin: 0;
