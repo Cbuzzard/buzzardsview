@@ -90,6 +90,7 @@ export class AppComponent implements AfterViewInit {
         this.arrow.nativeElement.style.display = 'none'
         this.initialAnimation = true;
         this.grid.nativeElement.classList.add('initial-transform-container')
+        this.grid.nativeElement.classList.add('post-grid-height')
         this.elArr.forEach(el => {
           el.el.nativeElement.style.transition = null;
           el.el.nativeElement.classList.remove('display-position')
@@ -101,7 +102,6 @@ export class AppComponent implements AfterViewInit {
         this.projects.nativeElement.style.opacity = null;
         break;
       case 2:
-        (document.getElementsByTagName("BODY")[0] as HTMLElement).style.height = 'fit-content';
         this.clickDisabled = true;
         this.enlargeAnimation = false;
         this.grid.nativeElement.classList.remove('enlarge')
@@ -113,11 +113,14 @@ export class AppComponent implements AfterViewInit {
         });
         break;
       case 3:
+        (document.getElementsByTagName("BODY")[0] as HTMLElement).style.height = 'fit-content';
         this.clickDisabled = false;
         this.arrow.nativeElement.style.opacity = 1;
         this.arrow.nativeElement.style.display = 'block'
         this.elArr.forEach(el => el.el.nativeElement.style.transitionDelay = '0s')
         this.grid.nativeElement.classList.remove('initial-transform-container')
+        this.grid.nativeElement.classList.remove('post-grid-height')
+
         this.elArr.forEach(el => {
           el.el.nativeElement.style.transition = 'transform .2s ease-in-out'
           el.el.nativeElement.style.transform = null
