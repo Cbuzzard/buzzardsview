@@ -94,7 +94,6 @@ app-card,  .emptycontainer{
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
     right: 0;
     margin: auto;
     width: 30%;
@@ -178,7 +177,7 @@ app-card,  .emptycontainer{
 }
 
 .title-container {
-    margin: 1% auto 0 auto;
+    margin: 2.5% auto 0 auto;
     width: fit-content;
     flex: 5%;
 }
